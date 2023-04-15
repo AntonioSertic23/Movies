@@ -6,6 +6,14 @@ Aplikacija Filmovi je nastala na faksu kao projekt za konstrukcijske vježbe za 
 
 Aplikacija služi za vođenje evidencije filmova kako bi si korisnik mogao pratiti omiljene pogledane filmove.
 
+Projekt je rađen u Visual Studiu unutar **Windows Forms(.NET)** programskog okvira koji koristi **C#**, a za rad sa bazom podataka koristi se **Microsoft SQL Server**.
+
+[![My Skills](https://skills.thijs.gg/icons?i=visualstudio,cs,sqlite)](https://skills.thijs.gg)
+
+Aplikacija sadrži prijavu i registraciju uz potrebne provjere unesenih parametara. Za vec spremljene filmove ima provjera i ažuriranje imdb ocjena kada korisnik klikne na button Refresh.
+
+Za dohvaćanje filmova i njihovih podataka koristi se [OMDb API](https://www.omdbapi.com/).
+
 ---
 
 ### Nakon uspješne prijave, u aplikaciji je moguće:
@@ -20,19 +28,9 @@ Aplikacija služi za vođenje evidencije filmova kako bi si korisnik mogao prati
 
 ---
 
-Projekt je rađen u Visual Studiu unutar **Windows Forms(.NET)** programskog okvira koji koristi **C#**, a za rad sa bazom podataka koristi se **Microsoft SQL Server**.
-
-[![My Skills](https://skills.thijs.gg/icons?i=visualstudio,cs,sqlite)](https://skills.thijs.gg)
-
-Aplikacija sadrži prijavu i registraciju uz potrebne provjere unesenih parametara. Za vec spremljene filmove ima provjera i ažuriranje imdb ocjena kada korisnik klikne na button Refresh.
-
-Za dohvaćanje filmova i njihovih podataka koristi se [OMDb API](https://www.omdbapi.com/).
-
----
-
 ### Pokretanje projekta
 
-Za pokretanje projekta potrebno je kreirati vlastiti _api key_ na službenoj stranici **OMDb API-a**, potom dobiveni _api key_ zalijepiti u `Form1.cs` unutar:
+Za pokretanje projekta potrebno je kreirati vlastiti _api key_ na službenoj stranici [OMDb API-a](https://www.omdbapi.com/), potom dobiveni _api key_ zalijepiti u `Form1.cs` unutar:
 
 ```sh
 const string ApiKey = "";
