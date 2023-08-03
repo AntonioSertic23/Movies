@@ -1,46 +1,46 @@
-# Filmovi
+# Movies
 
-## Desktop aplikacija za vođenje evidencije filmova
+## Desktop application for managing a movie catalog
 
-Aplikacija Filmovi je nastala na faksu kao projekt za konstrukcijske vježbe za predmet **Programiranje u .NET okolini**.
+The Movies application originated as a project during college for the construction exercises in the **Programming in .NET environment** course.
 
-Aplikacija služi za vođenje evidencije filmova kako bi si korisnik mogao pratiti omiljene pogledane filmove.
+The application is designed to keep track of movies, enabling users to manage their favorite watched films.
 
-Projekt je rađen u Visual Studiu unutar **Windows Forms(.NET)** programskog okvira koji koristi **C#**, a za rad sa bazom podataka koristi se **Microsoft SQL Server**.
+The project was developed using Visual Studio within the **Windows Forms (.NET)** framework, using **C#**, and **Microsoft SQL Server** for database management.
 
 [![My Skills](https://skills.thijs.gg/icons?i=dotnet,cs,sqlite)](https://skills.thijs.gg)
 
-Aplikacija sadrži prijavu i registraciju uz potrebne provjere unesenih parametara. Za vec spremljene filmove ima provjera i ažuriranje imdb ocjena kada korisnik klikne na button Refresh.
+The application includes user registration and login with necessary parameter validations. For previously saved movies, there is an option to update the IMDb rating by clicking the "Refresh" button.
 
-Za dohvaćanje filmova i njihovih podataka koristi se [OMDb API](https://www.omdbapi.com/).
-
----
-
-### Nakon uspješne prijave, u aplikaciji je moguće:
-
-- pretražiti filmove po nazivu i godini
-- pogledati detalje pojedinog filma
-- dodavanje filmova u svoju listu uz dodjelu vlastite ocjene
-- pogledati svoju listu filmova
-- pretražiti filmove u svojoj listi po nazivu, godini i žanru
-- ažurirati dodjeljene ocjene
-- uklanjanje filmova iz svoje liste
+To fetch movie data, the application uses the [OMDb API](https://www.omdbapi.com/).
 
 ---
 
-### Pokretanje projekta
+### Upon successful login, users can:
 
-Za pokretanje projekta potrebno je kreirati vlastiti _api key_ na službenoj stranici [OMDb API-a](https://www.omdbapi.com/), potom dobiveni _api key_ zalijepiti u `Form1.cs` unutar:
+- Search for movies by title and year
+- View details of individual movies
+- Add movies to their watchlist and assign personal ratings
+- View their list of movies
+- Search their watchlist by title, year, and genre
+- Update assigned ratings
+- Remove movies from their watchlist
+
+---
+
+### Project Setup
+
+To run the project, you need to create your own _api key_ on the official [OMDb API-a](https://www.omdbapi.com/) website and then paste the obtained _api key_ into `Form1.cs` under:
 
 ```sh
 const string ApiKey = "";
 ```
 
-Potebno je kreirati bazu podataka sa sljedećim tablicama. _sertic_Movies_ po modelu `Movie.cs` i _sertic_Users_ po modelu `Users.cs`.
+You need to create a database with the following tables: _sertic_Movies_ based on the `Movie.cs` model and _sertic_Users_ based on the `Users.cs` model.
 
-- Nazivi tablica mogu biti i proizvoljni, ali u tom slučaju potrebno je izmjeniti query-je unutar `MoviesRepository.cs` i `RegForma.cs`
+Table names can be arbitrary, but in that case, you need to modify the queries within `MoviesRepository.cs` and `RegForma.cs` accordingly.
 
-Zatim dodati putanju na bazu podataka u `MoviesRepository.cs` i `RegForma.cs` unutar:
+Then, add the database path in `MoviesRepository.cs` and `RegForma.cs` under:
 
 ```sh
 readonly string ConnectionString = @"";
