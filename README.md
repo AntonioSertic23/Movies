@@ -8,7 +8,7 @@ The application is designed to keep track of movies, enabling users to manage th
 
 The project was developed using Visual Studio within the **Windows Forms (.NET)** framework, using **C#**, and **Microsoft SQL Server** for database management.
 
-[![My Skills](https://skills.thijs.gg/icons?i=dotnet,cs,sqlite)](https://skills.thijs.gg)
+[![My Skills](https://skillicons.dev/icons?i=dotnet,cs,sqlite)](https://skillicons.dev)
 
 The application includes user registration and login with necessary parameter validations. For previously saved movies, there is an option to update the IMDb rating by clicking the "Refresh" button.
 
